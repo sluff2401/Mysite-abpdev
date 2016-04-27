@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Home page</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+        <style>
+            body                   {padding-left:18px;background-color:#F3FFF3}
+            p                      {font-size:large;font-weight:bold;color:#0000C0;background-color:#F3FFF3;}
+            h1                     {font-size:large;font-weight:bold;color:#000000;background-color:#F3FFF3;}
+            h1 table tr td         {font-size:large;font-weight:bold;color:#000000;background-color:#F3FFF3;}
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>
+            <a href="{% url "event_list" "current" %}"    target="_blank">                          Diary&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="{% url "person_list" %}"             target="_blank">                          Persons     &nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="{% url "circle_list" %}"             target="_blank">                          Circles     &nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </h1>
+            <h1>
+            <a href="{% url "bookmarks" %}"               target="_blank">                          Bookmarks&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="{% url "registrations" %}"           target="_blank">                          Registrations&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="{% url "local" %}"                   target="_blank">                          Local&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </h1>
+        </div>
+    {% block content %}
+    {% endblock %}
+    </body>
+</html>
+    {% comment %}
+            <h1>
+            <a href="{% url "heading_list" %}"            target="_blank">                          Headings&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+
+    {% endcomment %}
